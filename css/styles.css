@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    gap: 2rem;
+}
+
+.tool-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tool-container h2 {
+    margin-top: 0;
+}
+
+.tool-container button:hover {
+    background-color: #357ae8;
+}
+
+.tool-container:hover {
+    transform: translateY(-5px);
+    filter: brightness(105%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tool-container input[type="file"] {
+    margin-top: 1rem;
+}
+
+.tool-container button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.tool-container button:hover {
+    background-color: #357ae8;
+}
+.signature {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #666;
+    z-index: 9999;
+}

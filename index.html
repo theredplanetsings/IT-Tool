@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Tools</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Include required libraries from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Cleaner Container -->
+        <div class="tool-container" id="cleaner-container">
+            <h2>CSV Cleaner</h2>
+            <p>Select a <strong>.csv</strong> file to clean.<br>
+               (Expected columns: Licenses, Department, Office, First name, Last name, Usage location)</p>
+            <input type="file" id="cleaner-file" accept=".csv">
+            <button type="button" id="cleaner-start" style="display:none;">Start Cleaning</button>
+        </div>
+        
+        <!-- Randomiser Container -->
+        <div class="tool-container" id="randomiser-container">
+            <h2>CSV Randomiser</h2>
+            <p>Select a cleaned <strong>.csv</strong> file to randomise into 6 groups.</p>
+            <input type="file" id="randomiser-file" accept=".csv">
+            <button type="button" id="randomiser-start" style="display:none;">Start Randomising</button>
+        </div>
+        
+    </div>
+    
+    <div class="signature">
+        built by crutherford, 2025 Summer IT Intern
+    </div>
+
+    <script src="js/cleaner.js"></script>
+    <script src="js/randomiser.js"></script>
+</body>
+</html>

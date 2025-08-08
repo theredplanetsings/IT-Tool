@@ -39,15 +39,18 @@ function initCleaner() {
                         const licenses = String(row['Licenses'] || '');
                         return !licenses.includes('Unlicensed');
                     });
-                    
-                    // Removes rows with missing or blank values in key columns
-                    const requiredFields = ['Department', 'Office', 'First name', 'Last name', 'Usage location'];
+
+                    // Removes rows with missing or blank values in key columns, including new fields
+                    const requiredFields = [
+                        'Department', 'Office', 'First name', 'Last name', 'Usage location',
+                        'Title', 'Street address', 'Fax'
+                    ];
                     data = data.filter(row => {
                         return requiredFields.every(field => {
                             return row[field] !== undefined && String(row[field]).trim() !== '';
                         });
                     });
-                    
+
                     // Removes rows where "First name" or "Last name" contains any digits
                     data = data.filter(row => {
                         const firstName = String(row['First name'] || '');
